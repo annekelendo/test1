@@ -6,7 +6,8 @@ int main()
     int i; 
     int n = 0;
 	int r = 1; 
-	int z=0;
+
+	int z=1;
 	int d=0;
     setlocale(0, "");
     cout<< " N = " ;
@@ -14,10 +15,11 @@ int main()
 	for (i =0 ; z<=n ; i++)
     	{ d= i;
 		while ((d/=10) > 0) r++; 
-    	 //cout<<"i = " << i<<" "; 
-		 //cout<<"r = "<<r<< " "; 
     	 if ((i % r) == 0) 
-		 	{cout << i << " , " ;
+		 	{cout << i ;
+			 if(z==n) cout<< " . ";
+			 	else
+				 cout << " , " ;
 		 	 z++;}; 
     	}
     return 0;
